@@ -1,8 +1,13 @@
 // src/pages/ProductDetails.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
+import { useCart } from '../context/CartContext';
 const ProductDetails = () => {
+  const { addToCart,cart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart({ ...cart, quantity: 1 }); // Adding product to cart with quantity 1
+  };
   // Extracting productId from the URL using useParams()
   const { productId } = useParams();
 
@@ -23,10 +28,10 @@ const ProductDetails = () => {
   return (
     <div className="product-details">
       <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} className="product-image" />
+      <img src='https://www.pickfu.com/blog/wp-content/uploads/2019/09/test3.jpeg' width={200} alt={product.name} className="product-image" />
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
-      <button className="add-to-cart-button">Add to Cart</button>
+      <button   onClick={handleAddToCart} className="add-to-cart-button bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Add to Cart</button>
     </div>
   );
 };

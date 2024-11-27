@@ -26,7 +26,7 @@ const Cart = () => {
           {cart.map((item) => (
             <div key={item.id} className="flex justify-between mb-4">
               <div className="flex items-center">
-                <img src={item.image} alt={item.name} className="w-16 h-16 object-cover mr-4" />
+                <img src='https://www.pickfu.com/blog/wp-content/uploads/2019/09/test3.jpeg' alt={item.name} className="w-16 h-16 object-cover mr-4" />
                 <span>{item.name}</span>
               </div>
               <div className="flex items-center">

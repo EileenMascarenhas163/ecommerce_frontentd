@@ -7,6 +7,7 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import OrderConfirmation from './pages/OrderConfirmation';
+import Order from './pages/Order';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
 import { CartProvider } from './context/CartContext';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/order" element={<Order />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

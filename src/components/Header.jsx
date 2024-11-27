@@ -11,13 +11,16 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <Link to="/" className="text-2xl">E-Shop</Link>
         <div className="flex items-center space-x-4">
+        <Link to="/" >Home</Link>
           <Link to="/products">Products</Link>
           <Link to="/cart" className="relative">
+         
             <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">
               {cart.length}
             </span>
             Cart
           </Link>
+          <Link to="/order" >Order</Link>
         </div>
       </div>
     </header>

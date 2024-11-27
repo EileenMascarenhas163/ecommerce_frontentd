@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-lg hover:shadow-2xl transition-all">
       <img
-        src={product.image}
+        src='https://www.pickfu.com/blog/wp-content/uploads/2019/09/test3.jpeg'
         alt={product.name}
         className="w-full h-48 object-cover rounded-md mb-4"
       />
