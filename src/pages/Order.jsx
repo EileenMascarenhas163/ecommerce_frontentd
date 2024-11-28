@@ -12,7 +12,7 @@ const Order = () => {
         <div>
           <h2 className="text-2xl font-bold mb-4 text-gray-800">Order Details</h2>
           {ordercart.slice(1).map((order, orderIndex) => {
-            // Calculate the total amount for each order
+          
             const orderTotal = order.reduce((total, item) => {
               if (item && item.price && item.quantity) {
                 return total + item.price * item.quantity;
