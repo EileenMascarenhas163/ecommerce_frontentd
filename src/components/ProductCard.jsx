@@ -1,4 +1,4 @@
-// src/components/ProductCard.jsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    addToCart({ ...product, quantity: 1 }); // Adding product to cart with quantity 1
+    addToCart({ ...product, quantity: 1 }); 
   };
 
   return (

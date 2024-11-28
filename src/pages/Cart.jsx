@@ -1,4 +1,4 @@
-// src/pages/Cart.jsx
+
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,7 @@ const Cart = () => {
 
   const handleQuantityChange = (id, event) => {
     const quantity = parseInt(event.target.value, 10);
-    // Ensure the quantity is a valid positive integer
+  
     if (quantity > 0) {
       updateQuantity(id, quantity);
     }

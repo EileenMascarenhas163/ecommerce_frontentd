@@ -1,18 +1,18 @@
-// src/pages/OrderConfirmation.jsx
+
 import React from 'react';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
-  const { ordercart } = useCart(); // Get the order data from the context
+  const { ordercart } = useCart(); 
   const navigate = useNavigate();
 
-  // Calculate the total price of the order
+  
   const totalAmount = ordercart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
     <div className="p-4">
-      <h1 className="text-xl mb-4">Order Confirmation</h1>
+     
       {ordercart.length > 0 ? (
         <div>
           <h2 className="text-lg mb-4">Order Details</h2>

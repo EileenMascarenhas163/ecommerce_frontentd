@@ -1,4 +1,4 @@
-// src/pages/Checkout.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -11,7 +11,7 @@ const Checkout = () => {
   });
 
   const navigate = useNavigate();
-  const { cart, OrderaddToCart,  clearCart } = useCart(); // Extract functions and cart state
+  const { cart, OrderaddToCart,  clearCart } = useCart(); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,15 +21,12 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add all items in the cart to the order cart
     cart.forEach((item) => {
       OrderaddToCart(item);
     });
 
-    // Clear the cart after order is placed
     clearCart();
 
-    // Navigate to the order confirmation page
     navigate('/order-confirmation');
   };
 
@@ -66,7 +63,9 @@ const Checkout = () => {
             className="border px-2 py-1 w-full"
           >
             <option value="COD">Cash on Delivery</option>
-            {/* Add more payment options here if needed */}
+            <option value="UPI">UPI</option>
+            <option value="Net Banking">Net Banking</option>
+ 
           </select>
         </div>
         <button type="submit" className="bg-blue-500 text-white px-4 py-2">

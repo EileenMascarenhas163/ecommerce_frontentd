@@ -4,32 +4,30 @@ import ProductCard from '../components/ProductCard';
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const featuredProducts = [
-    { id: 1, name: 'Featured Product 1', image: '/images/ldfcnld.jpg', description: 'Amazing Product 1' },
-    { id: 2, name: 'Featured Product 2', image: '/featured2.jpg', description: 'Amazing Product 2' },
-    { id: 3, name: 'Featured Product 3', image: '/featured3.jpg', description: 'Amazing Product 3' },
+    { id: 1, name: 'Samsung Galaxy S23', image: '/images/samsung-s23.jpg', description: 'Flagship smartphone with a stunning display and powerful performance.' },
+    { id: 2, name: 'Apple MacBook Pro M2', image: '/images/macbook-pro.jpg', description: 'High-performance laptop with the latest M2 chip for professionals.' },
+    { id: 3, name: 'Sony WH-1000XM5 Headphones', image: '/images/sony-headphones.jpg', description: 'Industry-leading noise-canceling headphones with exceptional sound quality.' },
   ];
-
+  
   const topDeals = [
-    { id: 1, name: 'Top Deal 1', price: '99', image: '/images/ldfcnld.jpeg' },
-    { id: 2, name: 'Top Deal 2', price: '149', image: '/topdeal2.jpg' },
-    { id: 3, name: 'Top Deal 3', price: '199', image: '/topdeal3.jpg' },
+    { id: 1, name: 'Dyson V15 Detect Vacuum', price: 599, image: '/images/dyson-v15.jpg', description: 'The most powerful vacuum cleaner with laser detection for fine dust.' },
+    { id: 2, name: 'Bose SoundLink Revolve+ II', price: 249, image: '/images/bose-soundlink.jpg', description: 'Portable Bluetooth speaker with deep, loud, and immersive sound.' },
+    { id: 3, name: 'Fitbit Charge 5', price: 129, image: '/images/fitbit-charge5.jpg', description: 'Advanced fitness tracker with built-in GPS and health metrics.' },
   ];
-
+  
   const amazingDeals = [
-    { id: 1, name: 'Amazing Deal 1', price: '49', image: '/amazingdeal1.jpg' },
-    { id: 2, name: 'Amazing Deal 2', price: '89', image: '/amazingdeal2.jpg' },
-    { id: 3, name: 'Amazing Deal 3', price: '129', image: '/amazingdeal3.jpg' },
+    { id: 1, name: 'Instant Pot Duo Plus', price: 89, image: '/images/instant-pot.jpg', description: 'All-in-one pressure cooker for quick and delicious meals.' },
+    { id: 2, name: 'Ring Video Doorbell Pro', price: 159, image: '/images/ring-doorbell.jpg', description: 'Smart video doorbell with advanced motion detection and HD video.' },
+    { id: 3, name: 'GoPro HERO11 Black', price: 399, image: '/images/gopro-hero11.jpg', description: 'Rugged 4K action camera with stabilization and versatile mounting options.' },
   ];
-
+  
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % featuredProducts.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + featuredProducts.length) % featuredProducts.length);
 
   return (
     <div className="h-screen  ">
-      {/* Featured Products Carousel */}
-     
+
 
       {/* Featured Products Carousel */}
       <section className="my-8">
