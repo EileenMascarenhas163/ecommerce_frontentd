@@ -11,7 +11,7 @@ const Checkout = () => {
   });
 
   const navigate = useNavigate();
-  const { cart, OrderaddToCart,  clearCart } = useCart(); 
+  const { cart, OrderaddToCart,  clearCart} = useCart(); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,10 +20,10 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    cart.forEach((item) => {
-      OrderaddToCart(item);
-    });
+    
+  
+    OrderaddToCart(cart);
+    
 
     clearCart();
 

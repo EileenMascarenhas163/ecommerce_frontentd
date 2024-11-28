@@ -7,7 +7,7 @@ const Header = () => {
   const { cart } = useCart();
 
   return (
-    <header className="bg-blue-500 text-white p-4">
+    <header className="bg-gray-500 text-white p-4">
       <div className="flex justify-between items-center ">
         <Link to="/" className="text-2xl">E-Shop</Link>
         <div className="flex items-center space-x-4 font-bold">
